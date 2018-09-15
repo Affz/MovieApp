@@ -2,7 +2,8 @@ import * as React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Router } from 'react-router';
 import { createBrowserHistory } from 'history';
-import HelloWorld from '../../HelloWorld/Container/helloWorld';
+import MovieApp from '../../MovieApp/Container/movieApp';
+import Searchbar from '../../SearchBar/Containers/SearchBar';
 
 const history = createBrowserHistory();
 
@@ -20,7 +21,9 @@ export default class App extends React.Component<Props, {}> {
       <Router history={history}>
         <div>
           <Switch>
-            <Route path="/" component={HelloWorld} />
+          <Route path="/searchbar" component={Searchbar}/>
+            <Route path="/" component={MovieApp} />
+           
           </Switch>
         </div>
       </Router>
